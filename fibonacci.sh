@@ -1,17 +1,9 @@
-echo "Enter no. of terms"
+echo "Enter a number"
 read n
-a=0
-b=1
-echo "Enter i"
-read i
-echo "Fibonacci series:"
-echo $a
-echo $b
-while [ $i -le $n ]
+f=1
+while [ $n -ge 1 ]
 do
-f=$((a + b))
-a=$b
-b=$f
-echo $f
-i=`expr $i + 1`
+f=$((f * n))
+n=$((n - 1))
 done
+echo "FACTORIAL  : $f"
